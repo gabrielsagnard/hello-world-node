@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: hello-world
+spec:
+  rules:
+    - host: myapp.gabrielsagnard.fr
+      http:
+        paths:
+          - backend:
+              serviceName: hello-world
+              servicePort: 80
+            path: /*
